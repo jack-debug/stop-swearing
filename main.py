@@ -1,19 +1,9 @@
-#!/usr/bin/env python3
-
-# NOTE: this example requires PyAudio because it uses the Microphone class
-
-import speech_recognition as sr
-
-# obtain audio from the microphone
 r = sr.Recognizer()
 with sr.Microphone() as source:
-    print("Say something!")
     audio = r.listen(source)
-
-# recognize speech using Google Speech Recognition
-try:
-    print(r.recognize_google(audio))
+try: ##this is the sphinx recognition part
+    print(r.recognize_sphinx(audio))
 except sr.UnknownValueError:
     print("???")
 except sr.RequestError as e:
-    print("Could not request results from Google Speech Recognition service; {0}".format(e))
+    print("Sphinx error; {0}".format(e))
