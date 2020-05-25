@@ -1,4 +1,5 @@
 SpeechRecognition
+pocketsphinx
 pyttsx3
 google-api-python-client
 PyAudio
