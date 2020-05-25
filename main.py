@@ -1,18 +1,19 @@
-import os
-from pocketsphinx import LiveSpeech, get_model_path
+#!/usr/bin/env python3
 
-model_path = get_model_path()
+# NOTE: this example requires PyAudio because it uses the Microphone class
 
-speech = LiveSpeech(
-    verbose=False,
-    sampling_rate=16000,
-    buffer_size=2048,
-    no_search=False,
-    full_utt=False,
-    hmm=os.path.join(model_path, 'en-us'),
-    lm=os.path.join(model_path, 'en-us.lm.bin'),
-    dic=os.path.join(model_path, 'cmudict-en-us.dict')
-)
+import speech_recognition as sr
 
-for phrase in speech:
-    print(phrase)
+# obtain audio from the microphone
+r = sr.Recognizer()
+with sr.Microphone() as source:
+    print("Say something!")
+    audio = r.listen(source)
+
+# recognize speech using Google Speech Recognition
+try:
+    print(r.recognize_google(audio))
+except sr.UnknownValueError:
+    print("???")
+except sr.RequestError as e:
+    print("Could not request results from Google Speech Recognition service; {0}".format(e))
