@@ -7,12 +7,10 @@ Idk how effective this will be
 Here's a quick guide
 1. Install python3 on your computer.
 2. Open your computers terminal (bash, shell, ect.)
-3. Run the command (this installs and the dependencies for the script)
-` ` `
-pip3 install -r requirements.txt
-` ` `
-4. Run the command
-` ` `
-python3 main.py
-` ` `
-5. Enjoy :)
+3. Run the command ` ` ` git clone https://github.com/jack-debug/stop-swearing.git/ ` ` `
+4. Run the command ` ` ` cd stop-swearing ` ` `
+5. Run the command (this installs and the dependencies for the script)
+` ` ` pip install -r requirements.txt ` ` `
+6. Run the command
+` ` ` python main.py ` ` `
+7. Enjoy :)
