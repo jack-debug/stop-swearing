@@ -18,7 +18,7 @@ Here's a quick guide
 ### Common Issues
 Pip doesn't install the packages correctly. This is something I ran into when I tested this. Here's how to fix it.
 1. ` ` ` pip install wheel ` ` `
-2. ` ` ` pip install pinwin ` ` `
+2. ` ` ` pip install pipwin ` ` `
 3. ` ` ` pipwin install -r requirements.txt ` ` `
 
 Any other errors please leave them in the issues tab.
