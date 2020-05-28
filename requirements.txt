@@ -1,4 +1,4 @@
-google-cloud-speech
+pocketsphinx
 pyttsx3
 pyaudio
 six
